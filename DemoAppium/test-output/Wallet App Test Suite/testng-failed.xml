@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Wallet App Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login Tests(failed)">
+    <classes>
+      <class name="Test.LoginTest">
+        <methods>
+          <include name="close"/>
+          <include name="validatelogin"/>
+          <include name="setup"/>
+          <include name="initObject"/>
+        </methods>
+      </class> <!-- Test.LoginTest -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
+  <test thread-count="5" name="Send Payment Tests(failed)">
+    <classes>
+      <class name="Test.SendTest">
+        <methods>
+          <include name="close"/>
+          <include name="validatepayment"/>
+          <include name="setup"/>
+          <include name="initObject"/>
+        </methods>
+      </class> <!-- Test.SendTest -->
+    </classes>
+  </test> <!-- Send Payment Tests(failed) -->
+</suite> <!-- Failed suite [Wallet App Test Suite] -->

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" preserve-order="true">
+    <test name="iOS Test Suite">
+        <classes>
+            <class name="Test.SplashScreenTest" />
+            <class name="Test.LoginTest" />
+            <class name="Test.SendTest"/>
+        </classes>
+    </test>
+</suite>
