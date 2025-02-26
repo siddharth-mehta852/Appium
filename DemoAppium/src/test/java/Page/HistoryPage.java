@@ -34,12 +34,13 @@ public class HistoryPage {
 
 	public HistoryPage(IOSDriver driver) {
 		this.driver = driver;
+		this.cons=new Constant(driver);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		this.actions = new Actions(driver);
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//XCUIElementTypeButton[@name=\"icn tab transactions\"]")
+	@FindBy(xpath = "//XCUIElementTypeButton[@name=\"icn transaction badge\"]")
 	WebElement btn_history;
 
 	@FindBy(xpath="(//XCUIElementTypeCell[@name=\\\"TransactionTableViewCell\\\"])[2]\"")
@@ -59,7 +60,7 @@ public class HistoryPage {
 		Thread.sleep(1000);
 		System.out.println("Transaction Element Not Found");
 		wait.until(ExpectedConditions.elementToBeClickable(cons.back)).click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 
 	public void historytest() throws InterruptedException {

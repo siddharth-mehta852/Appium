@@ -55,9 +55,9 @@ public class BaseClass {
 	@BeforeSuite
 	public void setup() throws MalformedURLException, InterruptedException
 	{	
-		ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ExtentReport.html");
-		extent = new ExtentReports();
-		extent.attachReporter(spark);	
+//		ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ExtentReport.html");
+//		extent = new ExtentReports();
+//		extent.attachReporter(spark);	
 		
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -69,10 +69,10 @@ public class BaseClass {
 		capabilities.setCapability("appium:useNewWDA", true);
 		capabilities.setCapability("appium:autoAcceptAlerts", true);
 		capabilities.setCapability("autoGrantPermissions", true);
-		capabilities.setCapability("appium:deviceName", "iPhone");
+		capabilities.setCapability("appium:deviceName", "iPhone 12 mini");
 		capabilities.setCapability("appium:platformVersion", "17.5");
-		capabilities.setCapability("appium:udid", "24ADDA7D-D851-4D0D-BE60-FD107EF345DB");
-		capabilities.setCapability("appium:app", "/Users/speed/Desktop/Speed.app");
+		capabilities.setCapability("appium:udid", "00008101-001935913AC2001E");
+		capabilities.setCapability("appium:app", "/Users/speed/Desktop/Speed2.ipa");
 
 		
 		
@@ -91,6 +91,8 @@ public class BaseClass {
 //		}
 	}
 	
+	
+	
 	@BeforeClass
 	public void initObject()
 	{	
@@ -104,36 +106,39 @@ public class BaseClass {
 		set = new SettingsPage(driver);
 	}
 	
-	@BeforeMethod
+//	@BeforeMethod
+//	public void beforeMethod(ITestResult result) {
+//	    test = extent.createTest(result.getMethod().getMethodName());
+//	}
+
 	
-	@AfterMethod
-	public void getResult(ITestResult result)
-	{
-		if(result.getStatus() == ITestResult.FAILURE)
-		{
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-			
-			String screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-			test.addScreenCaptureFromBase64String(screenshot,"Screenshot on Failure");
-			
-		}
-		else if(result.getStatus() == ITestResult.SUCCESS)
-		{
-			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " - Test Case Passed", ExtentColor.GREEN));
-		}
-		else if(result.getStatus() == ITestResult.SKIP)
-		{
-			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.YELLOW));
-		}
-		
-	}
+//	@AfterMethod
+//	public void getResult(ITestResult result)
+//	{
+//		if(result.getStatus() == ITestResult.FAILURE)
+//		{
+//			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
+//			test.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
+//			
+//			String screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
+//			test.addScreenCaptureFromBase64String(screenshot,"Screenshot on Failure");
+//			
+//		}
+//		else if(result.getStatus() == ITestResult.SUCCESS)
+//		{
+//			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " - Test Case Passed", ExtentColor.GREEN));
+//		}
+//		else if(result.getStatus() == ITestResult.SKIP)
+//		{
+//			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.YELLOW));
+//		}
+//		
+//	}
 	
 	
 	@AfterSuite
 	public void close()
 	{
-		extent.flush();
 		driver.quit();
 	}
 

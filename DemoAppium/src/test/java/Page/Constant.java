@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class Constant {
 	IOSDriver driver;
@@ -89,18 +90,15 @@ public class Constant {
 	@FindBy(xpath="//XCUIElementTypeButton[@name=\"Not Now\"]")
 	WebElement notnow;
 	
+	@FindBy(xpath="//XCUIElementTypeOther[XCUIElementTypeStaticText[@value='Current Balance']]/XCUIElementTypeStaticText[2]")
+	WebElement balance;
 	
-//	By.ByXPath balance = new By.ByXPath("//XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]");
+	//By.ByXPath balance = new By.ByXPath("//XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]");
 	
 
 
 	By.ByXPath click_transaction = new By.ByXPath("(//XCUIElementTypeCell[@name=\"TransactionTableViewCell\"])[2]]");
-	
-	private double getBalance(String balanceXPath) {
-        WebElement balanceElement = driver.findElement(By.xpath(balanceXPath));
-        String balanceText = balanceElement.getText().replace(",", "");
-        return Double.parseDouble(balanceText);
-    }
+
 
 	public void clickSendAndInvoice() throws InterruptedException {
 		Thread.sleep(2000);
@@ -110,8 +108,8 @@ public class Constant {
 	
 	public void verifybalance()
 	{
-		double btcBalanceBefore = getBalance("//XCUIElementTypeStaticText[contains(@name, 'BTC')]");
-		 System.out.println("BTC Balance Before Swap: " + btcBalanceBefore);
+		wait.until(ExpectedConditions.visibilityOf(balance));
+		 System.out.println("BTC Balance: " + balance.getText());
 	}
 
 	public void enterAddressAmount(String address, String amount) {

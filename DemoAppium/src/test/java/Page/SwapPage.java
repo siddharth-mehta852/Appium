@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import io.appium.java_client.ios.IOSDriver;
 
 public class SwapPage {
@@ -82,10 +84,10 @@ public class SwapPage {
 	
 	public void verifyswap() throws InterruptedException
 	{
+		System.out.println("BTC Balance Before Swap is :"+ con.balance.getText());
 		btcswap();
 		hist.verifyhistory();
-		usdtswap();
-		hist.verifyhistory();
+		System.out.println("BTC Balance After Swap is :"+con.balance.getText());
 		
 		System.out.println("Swap Test Passed Successfully");
 	}

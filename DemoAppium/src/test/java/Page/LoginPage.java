@@ -96,11 +96,13 @@ public class LoginPage {
             System.out.println("State Dropdown not found, proceeding further...");
         }
 //        wait.until(ExpectedConditions.elementToBeClickable(cons.notnow)).click();
+        
+        cons.verifybalance();
+    
 	}
 	public void verifylogin() throws InterruptedException
 	{
 		logintest();
-		cons.verifybalance();
 		System.out.println("Login Test Completed");
 		
 	}

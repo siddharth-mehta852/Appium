@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,12 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test.LoginTest" class="method navigator-link" hash-for-method="validatelogin">validatelogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test.SendTest" class="method navigator-link" hash-for-method="validatepayment">validatepayment</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Test.SwapTest" class="method navigator-link" hash-for-method="validateswap">validateswap</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -123,6 +118,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Test.SplashScreenTest" class="method navigator-link" hash-for-method="splashScreenPage">splashScreenPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.LoginTest" class="method navigator-link" hash-for-method="validatelogin">validatelogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -140,76 +140,18 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Test.SendTest</span>
+              <span class="class-name">Test.SwapTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validatepayment">
-                  </a> <!-- validatepayment -->
-                  <span class="method-name">validatepayment</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //XCUIElementTypeButton[@name=&quot;icn tab transactions&quot;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at Page.HistoryPage.verifyhistory(HistoryPage.java:58)
-	at Page.HistoryPage.historytest(HistoryPage.java:67)
-	at Page.SendPage.lnurlsend(SendPage.java:52)
-	at Page.SendPage.validatepayment(SendPage.java:134)
-	at Test.SendTest.validatepayment(SendTest.java:13)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
-Driver info: io.appium.java_client.ios.IOSDriver
-Command: [ef5ab7f5-52ff-40dd-bb08-74064bef496c, findElement {value=//XCUIElementTypeButton[@name=&quot;icn tab transactions&quot;], using=xpath}]
-Capabilities {appium:app: /Users/speed/Desktop/Speed.app, appium:autoAcceptAlerts: true, appium:autoGrantPermissions: true, appium:automationName: XCUITest, appium:bundleId: com.app.speed1.dev, appium:databaseEnabled: false, appium:deviceName: iPhone, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.5, appium:takesScreenshot: true, appium:udid: 24ADDA7D-D851-4D0D-BE60-FD1..., appium:useNewWDA: true, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: ef5ab7f5-52ff-40dd-bb08-74064bef496c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 33 more
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Test.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validatelogin">
-                  </a> <!-- validatelogin -->
-                  <span class="method-name">validatelogin</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: For input string: &quot;BTC&quot;
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:651)
-	at Page.Constant.getBalance(Constant.java:102)
-	at Page.Constant.verifybalance(Constant.java:113)
-	at Page.LoginPage.verifylogin(LoginPage.java:103)
-	at Test.LoginTest.validatelogin(LoginTest.java:10)
+                  <a name="validateswap">
+                  </a> <!-- validateswap -->
+                  <span class="method-name">validateswap</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot read field &quot;back&quot; because &quot;this.cons&quot; is null
+	at Page.HistoryPage.verifyhistory(HistoryPage.java:61)
+	at Page.SwapPage.verifyswap(SwapPage.java:89)
+	at Test.SwapTest.validateswap(SwapTest.java:10)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -232,10 +174,25 @@ Session ID: ef5ab7f5-52ff-40dd-bb08-74064bef496c
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Test.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatelogin">
+                  </a> <!-- validatelogin -->
+                  <span class="method-name">validatelogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/speed/Downloads/DemoAppium/testng.xml</span>
+            <span class="header-content">/Users/speed/git/automation-project/DemoAppium/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -246,7 +203,7 @@ Session ID: ef5ab7f5-52ff-40dd-bb08-74064bef496c
     &lt;classes&gt;
       &lt;class name=&quot;Test.SplashScreenTest&quot;/&gt;
       &lt;class name=&quot;Test.LoginTest&quot;/&gt;
-      &lt;class name=&quot;Test.SendTest&quot;/&gt;
+      &lt;class name=&quot;Test.SwapTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- iOS Test Suite --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -288,22 +245,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validatepayment')
-data.setCell(0, 2, 'Test.SendTest')
-data.setCell(0, 3, 121691);
+data.setCell(0, 1, 'validatelogin')
+data.setCell(0, 2, 'Test.LoginTest')
+data.setCell(0, 3, 52204);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validatelogin')
-data.setCell(1, 2, 'Test.LoginTest')
-data.setCell(1, 3, 51978);
+data.setCell(1, 1, 'validateswap')
+data.setCell(1, 2, 'Test.SwapTest')
+data.setCell(1, 3, 38046);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'splashScreenPage')
 data.setCell(2, 2, 'Test.SplashScreenTest')
-data.setCell(2, 3, 10536);
+data.setCell(2, 3, 11393);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -322,7 +279,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.SendTest</span>
+              <span class="ignored-class-name">Test.SwapTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setup</span>
                 <br/>
@@ -333,9 +290,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">Test.LoginTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">close</span>
-                <br/>
                 <span class="ignored-method-name">setup</span>
+                <br/>
+                <span class="ignored-method-name">close</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -354,74 +311,42 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">initObject</span>
-                <span class="method-start">18963 ms</span>
+                <span class="method-start">25648 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">getResult([TestResult name={null} status=CREATED method=SplashScreenTest.splashScreenPage()[pri:0, instance:Te...)</span>
-                <span class="method-start">19008 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">splashScreenPage</span>
-                <span class="method-start">19011 ms</span>
+                <span class="method-start">25690 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">getResult([TestResult name=splashScreenPage status=SUCCESS method=SplashScreenTest.splashScreenPage()[pri:0, i...)</span>
-                <span class="method-start">29551 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initObject</span>
-                <span class="method-start">29560 ms</span>
+                <span class="method-start">37087 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">getResult([TestResult name={null} status=CREATED method=LoginTest.validatelogin()[pri:0, instance:Test.LoginTe...)</span>
-                <span class="method-start">29565 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">validatelogin</span>
-                <span class="method-start">29566 ms</span>
+                <span class="method-start">37093 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">getResult([TestResult name=validatelogin status=FAILURE method=LoginTest.validatelogin()[pri:0, instance:Test....)</span>
-                <span class="method-start">81546 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">Test.SendTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Test.SwapTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initObject</span>
-                <span class="method-start">81549 ms</span>
+                <span class="method-start">89299 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">getResult([TestResult name={null} status=CREATED method=SendTest.validatepayment()[pri:0, instance:Test.SendTe...)</span>
-                <span class="method-start">81553 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validatepayment</span>
-                <span class="method-start">81554 ms</span>
+                <span class="method-name">validateswap</span>
+                <span class="method-start">89302 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">getResult([TestResult name=validatepayment status=FAILURE method=SendTest.validatepayment()[pri:0, instance:Te...)</span>
-                <span class="method-start">203250 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.SplashScreenTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">close</span>
-                <span class="method-start">208305 ms</span>
+                <span class="method-start">132396 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

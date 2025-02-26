@@ -3,33 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="iOS Test Suite(failed)">
     <classes>
-      <class name="Test.SplashScreenTest">
+      <class name="Test.SwapTest">
         <methods>
           <include name="close"/>
-          <include name="getResult"/>
-          <include name="setup"/>
-          <include name="splashScreenPage"/>
-          <include name="initObject"/>
-        </methods>
-      </class> <!-- Test.SplashScreenTest -->
-      <class name="Test.SendTest">
-        <methods>
-          <include name="close"/>
-          <include name="validatepayment"/>
-          <include name="getResult"/>
+          <include name="validateswap"/>
           <include name="setup"/>
           <include name="initObject"/>
         </methods>
-      </class> <!-- Test.SendTest -->
-      <class name="Test.LoginTest">
-        <methods>
-          <include name="close"/>
-          <include name="validatelogin"/>
-          <include name="getResult"/>
-          <include name="setup"/>
-          <include name="initObject"/>
-        </methods>
-      </class> <!-- Test.LoginTest -->
+      </class> <!-- Test.SwapTest -->
     </classes>
   </test> <!-- iOS Test Suite(failed) -->
 </suite> <!-- Failed suite [Suite] -->
